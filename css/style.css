@@ -36,7 +36,7 @@ main .container {
     padding: 2rem;
 }
 
-.row {
+#row {
     width: 65rem;
     display: flex;
     justify-content: space-between;
