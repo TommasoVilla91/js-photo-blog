@@ -1,4 +1,4 @@
-const rowElem = document.getElementById("row");
+const rowElem = document.querySelector(".row");
 const params = {
     _limit: 6
 };
