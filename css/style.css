@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Sometype Mono", monospace;
-
 }
 
 img {
@@ -109,10 +108,14 @@ main .container {
 }
 
 .card:hover {
-    transform: scale(2);
+    transform: scale(1.15) rotate(10deg);
     z-index: 2;
-    transform: rotate(10deg);
-    box-shadow: 9px 9px 12px 6px rgba(0,0,0,0.3)
+    box-shadow: 9px 9px 12px 6px rgba(0,0,0,0.3);
+    transition: all 1s;
+}
+
+.card:hover .pin {
+    opacity: 0;
 }
 
 .card-img:hover {
