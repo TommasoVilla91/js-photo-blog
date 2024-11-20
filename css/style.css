@@ -32,21 +32,32 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-
-    /* debug */
-    width: 15rem;
 }
 
 .close-btn {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    width: 4rem;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #008CBA;
+    border-radius: 8px;
+    border: solid white;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    background-color: #006c91;
+    border: solid #006c91;
+    color: rgb(184, 184, 184);
 }
 
 h3 {
     background-color: white;
     padding: 1rem;
+}
+
+.modal-img {
+    width: 100%;
 }
 
 
@@ -66,6 +77,8 @@ h1 {
     font-family: "Edu TAS Beginner", cursive;
     font-size: 5rem;
 }
+
+
 
 /* MAIN */
 main {
@@ -95,6 +108,13 @@ main .container {
     box-shadow: 6px 6px 9px 3px rgba(0,0,0,0.3);
 }
 
+.card:hover {
+    transform: scale(2);
+    z-index: 2;
+    transform: rotate(10deg);
+    box-shadow: 9px 9px 12px 6px rgba(0,0,0,0.3)
+}
+
 .card-img:hover {
     cursor: pointer;
 }
@@ -111,6 +131,7 @@ main .container {
     padding: 0.5rem 2rem;
     text-align: center;
 }
+
 
 
 /* //////////// */

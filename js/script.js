@@ -1,17 +1,20 @@
+// dichiarazione
 const rowElem = document.querySelector(".row");
 const modalElem =document.querySelector(".modal");
 
-
+// variabile di supporto per creare array
 let imgs = [];
 
 // stampare immagini nell'html creando dei tag
 const printImg = () => {
 
+    // destrutturazione oggetti immagini
     let result = "";
     imgs.forEach((curImg) => {
         const {url, title} = curImg;
         console.log(curImg);
         
+        // assegnazione valori
         result += `
         <div class="card">
         <img class="pin" src="./img/pin.svg" alt="">
@@ -20,9 +23,11 @@ const printImg = () => {
         </div>
         `        
     });
+    // stampa in pagina
     rowElem.innerHTML = result;
 
     // funzioni per far comparire e scomparire il modal con l'immagine selezionata
+    // dichiarazione elementi
     const cardImgElem = document.querySelectorAll(".card-img");
     const closeBtnElem = document.querySelector(".close-btn");
     
