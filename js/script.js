@@ -1,7 +1,5 @@
 const rowElem = document.querySelector(".row");
-const params = {
-    _limit: 6
-};
+
 
 let imgs = [];
 
@@ -15,7 +13,7 @@ const printImg = () => {
         result += `
         <div class="card">
         <img class="pin" src="./img/pin.svg" alt="">
-        <img src="${url}" alt="">
+        <img src="${url}" alt="" class="card-img">
         <p>${title}</p>
         </div>
         `        
@@ -23,6 +21,9 @@ const printImg = () => {
     rowElem.innerHTML = result;
 };
 
+const params = {
+    _limit: 6
+};
 
 axios.get("https://jsonplaceholder.typicode.com/photos", {params}).then((resp) => {
     console.log(resp);
