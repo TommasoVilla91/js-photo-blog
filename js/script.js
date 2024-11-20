@@ -1,8 +1,10 @@
 const rowElem = document.querySelector(".row");
+const modalElem =document.querySelector(".modal");
 
 
 let imgs = [];
 
+// stampare immagini nell'html creando dei tag
 const printImg = () => {
 
     let result = "";
@@ -19,8 +21,31 @@ const printImg = () => {
         `        
     });
     rowElem.innerHTML = result;
+
+    // funzioni per far comparire e scomparire il modal con l'immagine selezionata
+    const cardImgElem = document.querySelectorAll(".card-img");
+    const closeBtnElem = document.querySelector(".close-btn");
+    
+    // al click far comparire l'immagine nel modal
+    cardImgElem.forEach((cardImg) => {  
+        console.log(cardImg);
+      
+        cardImg.addEventListener("click", () => {
+            modalElem.style.display = 'block'
+            const imgUrl = cardImg.src;
+            document.querySelector(".modal-img").src = imgUrl;
+        });       
+    });
+    
+    // al click sul pulsante farla scomparire insieme al modal
+    closeBtnElem.addEventListener("click", () => {
+        modalElem.style.display = "none";
+    });
+    
 };
 
+
+// funzione axios per generare massimo 6 immagini con titolo
 const params = {
     _limit: 6
 };
@@ -33,3 +58,4 @@ axios.get("https://jsonplaceholder.typicode.com/photos", {params}).then((resp) =
     
     printImg();
 });
+
